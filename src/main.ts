@@ -1,8 +1,10 @@
 import { bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
+import { routes } from './app/app.routes';  // Importa tus rutas
 import { AppComponent } from './app/app.component';
-import { importProvidersFrom } from '@angular/core';
-import { RouterModule } from '@angular/router'; // Si estás usando enrutamiento
 
 bootstrapApplication(AppComponent, {
-  providers: [importProvidersFrom(RouterModule.forRoot([]))], // Añade el módulo de rutas si es necesario
+  providers: [
+    provideRouter(routes)  // Proveer las rutas
+  ]
 }).catch(err => console.error(err));

@@ -1,7 +1,4 @@
-
-
 <main class="main">
-
 
   <div class="dashboard">
     <header class="top-header">
@@ -20,23 +17,30 @@
         </div>
       </div>
     </header>
+
+
+
+    
     <div class="main-container">
-      <nav class="sidebar">
-        <ul>
-          <li><a href="#"><i class="fas fa-box"></i> Gestión productos</a></li>
-         <li><a href="#"><i class="fas fa-users"></i> Gestión clientes</a></li>
-         <li><a href="#"><i class="fas fa-truck"></i> Entrega paquete</a></li>
-         <li><a href="#"><i class="fas fa-shopping-cart"></i> Ventas</a></li>
-         <li><a href="#"><i class="fas fa-chart-bar"></i> Reportes</a></li>
+  
+      <!-- Cuadro o ícono para mostrar/ocultar el menú -->
+      <div class="menu-wrapper" (mouseenter)="showMenu()" (mouseleave)="hideMenu()">
+        <nav class="sidebar" [class.hidden]="!menuVisible">
+         <ul>
+          <li><a [routerLink]="['/productos']"><i class="fas fa-box"></i> Gestión productos</a></li>
+          <li><a [routerLink]="['/clientes']"><i class="fas fa-users"></i> Gestión clientes</a></li>
+          <li><a [routerLink]="['/paquete']"><i class="fas fa-truck"></i> Entrega paquete</a></li>
+          <li><a [routerLink]="['/ventas']"><i class="fas fa-shopping-cart"></i> Ventas</a></li>
+          <li><a [routerLink]="['/reportes']"><i class="fas fa-chart-bar"></i> Reportes</a></li>
         </ul>
       </nav>
+
       <main class="main-content">
         <div class="content">
           <img src="img/Umg.png" alt="Universidad Mariano Galvez" class="university-logo">
           <h1>UNIVERSIDAD MARIANO GALVEZ</h1>
-        </div>
+        </div>       
       </main>
+      <router-outlet></router-outlet>
     </div>
   </div>
-
-</main>

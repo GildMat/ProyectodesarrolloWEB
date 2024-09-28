@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common'; // Importa CommonModule
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,13 +15,23 @@ import { CommonModule } from '@angular/common'; // Importa CommonModule
 export class AppComponent {
   title = 'angular-dashboard';
   userImagePath = './img/usuario.png';
+    
+    isUserMenuOpen = false;
+    menuVisible = false;
   
- 
-  isUserMenuOpen = false;
-  toggleUserMenu() {
-    this.isUserMenuOpen = !this.isUserMenuOpen;
-  }
+    
+    toggleUserMenu() {
+      this.isUserMenuOpen = !this.isUserMenuOpen;
+    }
+  
+    showMenu() {
+      this.menuVisible = true;
+    }
+  
+    hideMenu() {
+      this.menuVisible = false;
+    }
+  
+
+  
 }
-
-
-

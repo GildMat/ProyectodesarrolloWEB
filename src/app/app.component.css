@@ -1,122 +1,237 @@
 .dashboard {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.top-header {
-  background-color: #2196F3;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.user-info {
-  display: flex;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-}
-
-.usuario {
-  width: 40px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.user-dropdown {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  padding: 15px;
-  min-width: 200px;
-  z-index: 1000;
-}
-
-.user-details {
-  color: #333;
-}
-
-.user-details h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.user-details p {
-  margin: 5px 0;
-}
-
-.logout-btn {
-  display: block;
-  width: 100%;
-  padding: 8px;
-  margin-top: 10px;
-  background-color: #f44336;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.logout-btn:hover {
-  background-color: #d32f2f;
-}
-
-.main-container {
-  display: flex;
-  flex: 1;
-  overflow: hidden;
-}
-
-.sidebar {
-  width: 250px;
-  background-color: #000;
-  color: white;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar li a {
-  display: block;
-  padding: 10px 15px;
-  color: white;
-  text-decoration: none;
-}
-
-.main-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-}
-
-.university-logo {
-  max-width: 200px;
-  margin-bottom: 20px;
-}
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .top-header {
+    background-color: #1271cf;
+    color: rgb(236, 229, 229);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    color: rgb(205, 141, 141);
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .usuario {
+    width: 40px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .user-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #0e0909;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    min-width: 200px;
+    z-index: 1000;
+  }
+  
+  .user-details {
+    color: #1c1818;
+  }
+  
+  .user-details h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .user-details p {
+    margin: 5px 0;
+  }
+  
+  .logout-btn {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: #d33232;
+    color: rgb(215, 219, 234);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .logout-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  .main-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #812f2f;
+    color: rgb(201, 50, 50);
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li a {
+    display: block;
+    padding: 10px 15px;
+    color: rgb(151, 57, 57);
+    text-decoration: none;
+  }
+  
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .main-content {
+    display: inline-flex;
+    justify-content: center;  /* Centrar horizontalmente */
+    align-items: center;      /* Centrar verticalmente */
+    height: 50vh;            /* Ocupa toda la altura de la ventana */
+    flex-direction: column;   /* Asegura que los elementos estén uno debajo del otro */
+  }
+  
+  .content {
+    text-align: center;  /* Centrar el texto e imagen */
+  }
+  
+  .university-logo {
+    
+    max-width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  
+  
+  .product-registration {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #4a90e2;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4a90e2;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3a7bc8;
+  }
+  
+  .sidebar ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #e4dbdb;
+    cursor: pointer;  /* Cambia el cursor a "pointer" */
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #f0f0f0;  /* Opcional: cambiar el fondo al pasar sobre el enlace */
+    color: #c2c8ce;  /* Opcional: cambiar el color del texto al pasar sobre el enlace */
+  }
+  
+  
+  
+  /* Ocultar el menú cuando no está visible */
+  .sidebar.hidden {
+    display: none;
+  }
+  
+  
+  
+  .menu-wrapper {
+    position: relative;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    top: 60px;
+    left: 0;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #ddd;
+  }
+  

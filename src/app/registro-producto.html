@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="my-3 text-primary">Registro de Productos</h2>
+      </div>
+    </div>
+    
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <label for="codigo" class="form-label">Código</label>
+        <input type="text" class="form-control" id="codigo" [(ngModel)]="producto.codigo">
+      </div>
+      <div class="col-md-2 d-flex align-items-end">
+        <button class="btn btn-primary w-100" (click)="buscarProducto()">Buscar</button>
+      </div>
+    </div>
+  
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <label for="descripcion" class="form-label">Descripción</label>
+        <input type="text" class="form-control" id="descripcion" [(ngModel)]="producto.descripcion" placeholder="Descripción..." disabled>
+      </div>
+      <div class="col-md-3">
+        <label for="fechaVencimiento" class="form-label">Fecha de Vencimiento</label>
+        <mat-form-field class="w-100" appearance="fill">
+          <mat-label>Seleccione fecha</mat-label>
+          <input matInput [matDatepicker]="picker" [(ngModel)]="producto.fechaVencimiento">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+  
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <label for="codigoProveedor" class="form-label">Código Proveedor</label>
+        <input type="text" class="form-control" id="codigoProveedor" [(ngModel)]="producto.codigoProveedor" placeholder="Código proveedor..." disabled>
+      </div>
+      <div class="col-md-4">
+        <label for="ubicacionFisica" class="form-label">Ubicación Física</label>
+        <input type="text" class="form-control" id="ubicacionFisica" [(ngModel)]="producto.ubicacionFisica" placeholder="Ubicación..." disabled>
+      </div>
+      <div class="col-md-2">
+        <label for="cantidad" class="form-label">Cantidad</label>
+        <input type="number" class="form-control" id="cantidad" [(ngModel)]="producto.cantidad" placeholder="Stock..." disabled>
+      </div>
+    </div>
+  </div>
+  
