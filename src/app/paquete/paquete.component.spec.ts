@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PaqueteComponent } from './paquete.component';
+import { PaqueteComponent } from './RegistrarEntrega';
 
 describe('PaqueteComponent', () => {
   let component: PaqueteComponent;

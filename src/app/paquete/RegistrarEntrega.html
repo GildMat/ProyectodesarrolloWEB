@@ -1,0 +1,43 @@
+<div class="container">
+  <h2>Registro de Entrega</h2>
+
+  <form (ngSubmit)="guardarEntrega()">
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="CodigoCliente">Codigo Cliente</label>
+        <input id="CodigoCliente" type="text" [(ngModel)]="entrega.CodigoCliente" name="CodigoCliente" class="form-control" placeholder="1233..." (change)="buscarCliente()">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="CodigoProducto">Codigo Producto</label>
+        <input id="CodigoProducto" type="text" [(ngModel)]="entrega.CodigoProducto" name="CodigoProducto" class="form-control" placeholder="1122...." (change)="buscarProducto()">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="FechaEntrega">Fecha de Entrega</label>
+        <input id="FechaEntrega" type="date" [(ngModel)]="entrega.FechaEntrega" name="fecha" class="form-control" required>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="EstadoEntrega">Estado de Entrega</label>
+        <select id="EstadoEntrega" [(ngModel)]="entrega.EstadoEntrega" name="categoriaCliente" class="form-control">
+          <option value="">Seleccione...</option>
+          <option value="Entregado">Entregado</option>
+          <option value="Pendiente">Pendiente</option>
+          <option value="En Ruta">En Ruta</option>
+        </select>
+      </div>     
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="UbicacionEntrega">Dirección</label>
+        <input id="UbicacionEntrega" type="text" [(ngModel)]="entrega.UbicacionEntrega" name="direccionCliente" class="form-control" placeholder="Col. Madre Tierra...">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+</div>

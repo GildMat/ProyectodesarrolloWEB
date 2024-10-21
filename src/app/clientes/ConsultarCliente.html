@@ -1,0 +1,48 @@
+<div class="container">
+    <h2>Consulta de cliente</h2>
+  
+    <form (ngSubmit)="buscarCliente()">
+      <div class="form-group col-md-6">
+        <label for="codigo">Ingrese el Código del Cliente</label>
+        <input id="codigo" type="text" [(ngModel)]="cliente.codigoCliente" name="codigoCliente" class="form-control" placeholder=" ">
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="NombresCliente">Nombres</label>
+          <input id="NombresCliente" type="text" [(ngModel)]="cliente.nombresCliente" name="nombresCliente" class="form-control" placeholder="Juan José..." disabled>
+        </div>
+  
+        <div class="form-group col-md-6">
+          <label for="ApellidosCliente">Apellidos</label>
+          <input id="ApellidosCliente" type="text" [(ngModel)]="cliente.apellidosCliente" name="apellidosCliente" class="form-control" placeholder="Pérez López..." disabled>
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="NIT">NIT</label>
+          <input id="NIT" type="text" [(ngModel)]="cliente.nit" name="nit" class="form-control" placeholder="0614..." disabled>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="DireccionCliente">Dirección</label>
+          <input id="DireccionCliente" type="text" [(ngModel)]="cliente.direccionCliente" name="direccionCliente" class="form-control" placeholder="Col. Madre Tierra..." disabled>
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="CategoriaCliente">Categoria</label>
+          <input id="CategoriaCliente" type="text" [(ngModel)]="cliente.categoriaCliente" name="categoriaCliente" class="form-control" placeholder="VIP, Regular..." disabled>
+        </div>
+  
+        <div class="form-group col-md-6">
+          <label for="EstadoCliente">Estado</label>
+          <input id="EstadoCliente" type="text" [(ngModel)]="cliente.estadoCliente" name="estadoCliente" class="form-control" placeholder="Activo, Inactivo..." disabled>
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Buscar Cliente</button>
+    </form>
+  </div>
+  

@@ -1,46 +1,77 @@
 <main class="main">
-
   <div class="dashboard">
     <header class="top-header">
       <button class="close-btn"></button>
       <div class="user-info" (click)="toggleUserMenu()">
-        <img src="img/usuario.png" alt="user" class="usuario">
-        <span>J</span>
-        <span class="role">I</span>
-        <div class="user-dropdown" *ngIf="isUserMenuOpen">
-          <div class="user-details">
-            <h3>nomre usuario</h3>
-            <p>Rol:</p>
-            <p>Email</p>
-          </div>
-          <button class="logout-btn">Cerrar sesión</button>
-        </div>
+        <img src="img/Umg.png" alt="user" class="logo">
       </div>
     </header>
 
-
-
-    
     <div class="main-container">
+      <nav class="sidebar">
+        <ul>
+
+         
+          <li class="has-submenu">
+            <a><i class="fas fa-users"></i> Gestión de Clientes</a>
+            <ul class="submenu">
+              <li><a [routerLink]="['/clientes/AgregarCliente']">Ingresar Cliente</a></li>
+              <li><a [routerLink]="['/clientes/ConsultarCliente']">Consultar Cliente</a></li>
+              <li><a [routerLink]="['/clientes/ActualizarCliente']">Actualizar Cliente</a></li>
+              <li><a [routerLink]="['/clientes/EliminarCliente']">Eliminar Cliente</a></li>
+            </ul>
+          </li>
+
+          <li class="has-submenu">
+            <a><i class="fas fa-box"></i> Gestión productos</a>
+            <ul class="submenu">
+              <li><a [routerLink]="['/productos/IngresarProducto']">Ingresar Producto</a></li>
+              <li><a [routerLink]="['/productos/ConsultarProducto']">Consultar Producto</a></li>
+              <li><a [routerLink]="['/productos/ActualizarProducto']">Actualizar Producto</a></li>
+              <li><a [routerLink]="['/productos/EliminarProducto']">Eliminar Producto</a></li>
+            </ul>
+          </li>
+
   
-      <!-- Cuadro o ícono para mostrar/ocultar el menú -->
-      <div class="menu-wrapper" (mouseenter)="showMenu()" (mouseleave)="hideMenu()">
-        <nav class="sidebar" [class.hidden]="!menuVisible">
-         <ul>
-          <li><a [routerLink]="['/productos']"><i class="fas fa-box"></i> Gestión productos</a></li>
-          <li><a [routerLink]="['/clientes']"><i class="fas fa-users"></i> Gestión clientes</a></li>
-          <li><a [routerLink]="['/paquete']"><i class="fas fa-truck"></i> Entrega paquete</a></li>
-          <li><a [routerLink]="['/ventas']"><i class="fas fa-shopping-cart"></i> Ventas</a></li>
-          <li><a [routerLink]="['/reportes']"><i class="fas fa-chart-bar"></i> Reportes</a></li>
-        </ul>
+          <li class="has-submenu">
+            <a><i class="fas fa-shopping-cart"></i> Gestión Ventas</a>
+            <ul class="submenu">
+              <li><a [routerLink]="['/ventas/RegistrarVenta']">Registrar Venta</a></li>
+             
+            </ul>
+          </li> 
+
+          <li class="has-submenu">
+            <a><i class="fas fa-shopping-cart"></i>Notas de Credito</a>
+            <ul class="submenu">
+              <li><a [routerLink]="['/NotasCredito/AgregarCredito']">Registrar Nota de Credito</a></li>
+             
+            </ul>
+          </li>
+
+          <li class="has-submenu">
+            <a><i class="fas fa-truck"></i>Entrega de Paquete</a>
+            <ul class="submenu">
+              <li><a [routerLink]="['/paquete/RegistrarEntrega']">Ingreso de Entrega</a></li>
+              <li><a [routerLink]="['/paquete/BuscarPaquete']">Seguimiento de Entrega</a></li>
+              <li><a [routerLink]="['/paquete/BitacoraPaquete']">Consulta de Bitacora</a></li>
+
+            </ul>
+          </li>
+         
+        
+         
+                </ul>
       </nav>
 
-      <main class="main-content">
-        <div class="content">
-          <img src="img/Umg.png" alt="Universidad Mariano Galvez" class="university-logo">
-          <h1>UNIVERSIDAD MARIANO GALVEZ</h1>
-        </div>       
-      </main>
       <router-outlet></router-outlet>
     </div>
+
+    <main class="main-content">
+      <div class="content" *ngIf="showWelcome">
+        <img src="img/Umg.png" alt="Universidad Mariano Galvez" class="university-logo">
+        <h1>UNIVERSIDAD MARIANO GALVEZ</h1>
+      </div>
+    </main>
   </div>
+</main>

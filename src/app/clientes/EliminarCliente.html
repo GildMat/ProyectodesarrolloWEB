@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Listado de Clientes</h2>
+  
+    <!-- Mensaje de éxito o error -->
+    <div *ngIf="mensaje" class="alert alert-info">{{ mensaje }}</div>
+  
+    <!-- Tabla de clientes -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>NIT</th>
+          <th>Dirección</th>
+          <th>Categoría</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of clientes">
+          <td>{{ cliente.codigoCliente }}</td>
+          <td>{{ cliente.nombresCliente }}</td>
+          <td>{{ cliente.apellidosCliente }}</td>
+          <td>{{ cliente.nit }}</td>
+          <td>{{ cliente.direccionCliente }}</td>
+          <td>{{ cliente.categoriaCliente }}</td>
+          <td>{{ cliente.estadoCliente }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="eliminarCliente(cliente.codigoCliente)">
+              <i class="fas fa-trash"></i> Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

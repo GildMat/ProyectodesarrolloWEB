@@ -1,0 +1,42 @@
+<div class="container">
+    <h2>Actualizar Productos</h2>
+   
+  
+    <form>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="codigo">Ingrese el Código del Producto</label>
+          <input id="codigo" type="text" [(ngModel)]="producto.codigo" name="codigo" class="form-control" placeholder=" ">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="codigoProveedor">Código proveedor</label>
+          <input id="codigoProveedor" type="text" [(ngModel)]="producto.codigoProveedor" name="codigoProveedor" class="form-control" placeholder="Código proveedor...">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="descripcion">Descripción</label>
+          <input id="descripcion" type="text" [(ngModel)]="producto.descripcion" name="descripcion" class="form-control" placeholder="Descripción...">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="fechaVencimiento">Fecha vencimiento</label>
+          <input id="fechaVencimiento" type="date" [(ngModel)]="producto.fechaVencimiento" name="fechaVencimiento" class="form-control">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="ubicacionFisica">Ubicación física</label>
+          <input id="ubicacionFisica" type="text" [(ngModel)]="producto.ubicacionFisica" name="ubicacionFisica" class="form-control" placeholder="Ubicación...">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="cantidad">Cantidad</label>
+          <input id="existenciaMinima" type="number" [(ngModel)]="producto.existenciaMinima" name="cantidad" class="form-control" placeholder="Stock...">
+        </div>    
+      </div>  
+      <div class="button-row">       
+        <button type="button" class="btn btn-success" (click)="buscarProducto()">Buscar Producto</button>
+        <button type="button" class="btn btn-primary" (click)="actualizarProducto()">Guardar Modificaciones</button>
+      </div>
+    </form>
+  </div>

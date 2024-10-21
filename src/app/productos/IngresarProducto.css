@@ -1,0 +1,94 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #2673c1;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .form-group.col-md-6 {
+    width: 48%;
+  }
+  
+  input[type="text"], input[type="number"], input[type="date"], .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #2673c1;
+    box-shadow: 0 0 5px rgba(38, 115, 193, 0.5);
+  }
+  
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  button {
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button.btn-success {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  button.btn-primary {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  button.btn-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+    }
+  
+    .form-group.col-md-6 {
+      width: 100%;
+    }
+  
+    .button-row {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
+
+ 

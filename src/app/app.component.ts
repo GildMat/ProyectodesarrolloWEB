@@ -1,37 +1,38 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { CommonModule } from '@angular/common'; // Importa CommonModule
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-
-
   standalone: true,
-  imports: [RouterModule, CommonModule] 
-
+  imports: [RouterModule, CommonModule]
 })
 export class AppComponent {
   title = 'angular-dashboard';
-  userImagePath = './img/usuario.png';
-    
-    isUserMenuOpen = false;
-    menuVisible = false;
-  
-    
-    toggleUserMenu() {
-      this.isUserMenuOpen = !this.isUserMenuOpen;
-    }
-  
-    showMenu() {
-      this.menuVisible = true;
-    }
-  
-    hideMenu() {
-      this.menuVisible = false;
-    }
-  
 
-  
+  isUserMenuOpen = false;
+  menuVisible = false;
+  showWelcome = true;  // Nueva propiedad para controlar el logo y el texto
+
+  constructor(private router: Router) {
+    // Detectar cambios en la ruta
+    this.router.events.subscribe(() => {
+      // Verificar si la URL actual es la página de inicio
+      this.showWelcome = this.router.url === '/';
+    });
+  }
+
+  toggleUserMenu() {
+    this.isUserMenuOpen = !this.isUserMenuOpen;
+  }
+
+  showMenu() {
+    this.menuVisible = true;
+  }
+
+  hideMenu() {
+    this.menuVisible = false;
+  }
 }

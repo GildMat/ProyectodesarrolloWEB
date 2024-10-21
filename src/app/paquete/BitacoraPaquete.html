@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Lista de Paquetes</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Código Producto</th>
+          <th>Fecha de Entrega</th>
+          <th>Estado de Entrega</th>
+          <th>Ubicación de Entrega</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let paquete of paquetes" [ngClass]="getEstadoClass(paquete.estadoEntrega)">
+          <td>{{ paquete.codigoProducto }}</td>
+          <td>{{ paquete.fechaEntrega }}</td>
+          <td>{{ paquete.estadoEntrega }}</td>
+          <td>{{ paquete.ubicacionEntrega }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Buscar Paquete</h2>
+  <form (ngSubmit)="buscarPaquete()">
+    <div class="form-group">
+      <label for="CodigoPaquete">Código de Paquete</label>
+      <input
+        id="CodigoPaquete"
+        type="text"
+        [(ngModel)]="codigoPaquete"
+        name="codigoPaquete"
+        class="form-control"
+        placeholder="Ingrese el código del paquete"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+  </form>
+
+  <div *ngIf="paquete">
+    <h3>Detalles del Paquete</h3>
+    <p><strong>Estado de Entrega:</strong> {{paquete.estadoEntrega}}</p>
+    <p><strong>Dirección:</strong> {{ paquete.ubicacionEntrega }}</p>
+
+    <!-- Solo muestra el mapa si mapaListo es verdadero -->
+    <div *ngIf="mapaListo" id="map" style="height: 400px;"></div>
+  </div>
+</div>

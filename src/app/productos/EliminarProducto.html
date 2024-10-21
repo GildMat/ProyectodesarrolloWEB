@@ -1,0 +1,37 @@
+<div class="container">
+    <h2>Listado de Productos</h2>
+  
+    <!-- Mensaje de éxito o error -->
+    <div *ngIf="mensaje" class="alert alert-info">{{ mensaje }}</div>
+  
+    <!-- Tabla de productos -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Descripción</th>
+          <th>Código Proveedor</th>
+          <th>Fecha Vencimiento</th>
+          <th>Ubicación Física</th>
+          <th>Existencia Mínima</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productos">
+          <td>{{ producto.codigoProducto }}</td>
+          <td>{{ producto.descripcion }}</td>
+          <td>{{ producto.codigoProveedor }}</td>
+          <td>{{ producto.fechaVencimiento | date: 'yyyy-MM-dd' }}</td>
+          <td>{{ producto.ubicacionFisica }}</td>
+          <td>{{ producto.existenciaMinima }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="eliminarProducto(producto.codigoProducto)">
+              <i class="fas fa-trash"></i> Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

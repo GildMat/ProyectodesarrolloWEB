@@ -1,23 +1,16 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+<div class="container">
+  <h2>Localización</h2>
 
-import { ProductosComponent } from './productos.component';
+  <div class="form-group">
+    <label for="codigo-venta">Código venta</label>
+    <input id="codigo-venta" type="text" [(ngModel)]="codigoVenta" class="form-control" placeholder="Ingrese el código de venta">
+    <button (click)="buscarPaquete()">Buscar</button>
+  </div>
 
-describe('ProductosComponent', () => {
-  let component: ProductosComponent;
-  let fixture: ComponentFixture<ProductosComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [ProductosComponent]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(ProductosComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  <!-- Componente de Google Maps -->
+  <div class="map-container" style="height: 400px; width: 100%;"> <!-- Asegura dimensiones -->
+    <google-map height="400px" width="100%" [center]="center" [zoom]="zoom">
+      <map-marker [position]="markerPosition"></map-marker>
+    </google-map>
+  </div>
+</div>
